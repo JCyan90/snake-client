@@ -1,5 +1,6 @@
 // Stores the active TCP connection object.
 let connection;
+const { MOVE_UP_KEY } = require('./constants');
 
 /**
  * Setup User Interface 
@@ -9,7 +10,7 @@ const handleUserInput = function(key) {
   if (key === "\u0003") {
     process.exit();
  }
-  if (key === "\u007a") {
+  if (key === MOVE_UP_KEY) {
     connection.write("Move: up");
  }
   if (key === "\u0073") {
